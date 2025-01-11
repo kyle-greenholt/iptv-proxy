@@ -6,7 +6,7 @@ on:
       - '*'
 
 jobs:
-  goreleaser:
+  package-publish:
     runs-on: ubuntu-latest
     steps:
       - 
