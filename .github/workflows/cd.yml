@@ -21,7 +21,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: docker.pkg.github.com/${{ github.repository }}/caddy-auth:latest
+          tags: |
+            docker.pkg.github.com/${{ github.repository }}/iptv-proxy:${{ github.ref_name }}
+            docker.pkg.github.com/${{ github.repository }}/iptv-proxy:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
